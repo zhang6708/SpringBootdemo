@@ -20,6 +20,7 @@ public class Controller {
     private UserServiceImpl userServiceImpl;
 
     @GetMapping("/list")
+    //测试
     public List<User> listAll() {
         return userServiceImpl.listAll();
     }
