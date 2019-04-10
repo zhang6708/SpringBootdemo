@@ -2,19 +2,20 @@ package com.example.demo.service.impl;
 
 import com.example.demo.dao.User;
 
-import com.example.demo.service.Userservice;
+import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @Service
-public class UserServiceImpl {
+public class UserServiceImpl implements UserService{
 
     @Autowired
-    protected Userservice services;
+    private UserService Service;
 
     public List<User> listAll() {
-        return services.selectAll();
+        return Service.listAll();
     }
 }

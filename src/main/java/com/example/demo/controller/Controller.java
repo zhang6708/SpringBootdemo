@@ -19,7 +19,7 @@ public class Controller {
     @Autowired
     private UserServiceImpl userServiceImpl;
 
-    @GetMapping("/list/all")
+    @GetMapping("/list")
     public List<User> listAll() {
         return userServiceImpl.listAll();
     }
